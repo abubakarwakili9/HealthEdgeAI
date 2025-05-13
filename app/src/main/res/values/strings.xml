@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HealthEdgeAI</string>
+    <!-- Add these strings to your existing strings.xml file -->
+    <string name="select_vital_sign">Select Vital Sign</string>
+    <string name="no_data_available">No data available</string>
+    <string name="export_pdf">Export PDF</string>
+    <string name="view_details">View Details</string>
+    <string name="export_all_records">Export All Records</string>
+    <string name="show_charts">Show Charts</string>
+</resources>

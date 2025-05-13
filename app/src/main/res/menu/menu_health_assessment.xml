@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_templates"
+        android:title="Vital Signs Templates"
+        android:icon="@android:drawable/ic_menu_save"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_connect_devices"
+        android:title="Connect Devices"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/action_connect_thermometer"
+                android:title="Connect Thermometer" />
+
+            <item
+                android:id="@+id/action_connect_heart_rate"
+                android:title="Connect Heart Rate Monitor" />
+
+            <item
+                android:id="@+id/action_connect_blood_pressure"
+                android:title="Connect Blood Pressure Monitor" />
+
+            <item
+                android:id="@+id/action_connect_oxygen"
+                android:title="Connect Oxygen Saturation Monitor" />
+
+            <item
+                android:id="@+id/action_connect_glucose"
+                android:title="Connect Glucose Meter" />
+        </menu>
+    </item>
+
+</menu>

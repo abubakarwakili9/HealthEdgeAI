@@ -82,4 +82,9 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation ("com.google.android.material:material:1.9.0' // Use the latest version")
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+        // Your existing dependencies
+     implementation ("de.hdodenhof:circleimageview:3.1.0")
+
+
 }

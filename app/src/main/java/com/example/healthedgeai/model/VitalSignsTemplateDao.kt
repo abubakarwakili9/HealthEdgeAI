@@ -11,12 +11,15 @@ interface VitalSignsTemplateDao {
     @Query("SELECT * FROM vital_signs_templates ORDER BY name ASC")
     fun getAllTemplates(): LiveData<List<VitalSignsTemplate>>
 
-    @Query("SELECT * FROM vital_signs_templates ORDER BY name ASC")
-    suspend fun getAllTemplatesList(): List<VitalSignsTemplate>
-
     @Query("SELECT * FROM vital_signs_templates WHERE templateId = :templateId")
-    suspend fun getTemplateById(templateId: String): VitalSignsTemplate?
+    fun getTemplateById(templateId: String): LiveData<VitalSignsTemplate>
+
+    @Update
+    suspend fun updateTemplate(template: VitalSignsTemplate)
+
+    @Delete
+    suspend fun deleteTemplate(template: VitalSignsTemplate)
 
     @Query("DELETE FROM vital_signs_templates WHERE templateId = :templateId")
-    suspend fun deleteTemplate(templateId: String)
+    suspend fun deleteTemplateById(templateId: String)
 }

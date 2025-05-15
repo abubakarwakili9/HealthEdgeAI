@@ -120,6 +120,13 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Syncing data...", Toast.LENGTH_SHORT).show()
                 true
             }
+            R.id.action_profile -> {
+                Log.d(TAG, "Profile menu item selected")
+                // Navigate to profile screen
+                val intent = Intent(this, ProfileActivity::class.java)
+                startActivity(intent)
+                true
+            }
             R.id.action_logout -> {
                 Log.d(TAG, "Logout menu item selected")
                 // Logout and navigate to login screen

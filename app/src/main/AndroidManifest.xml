@@ -2,16 +2,33 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Add this permission -->
+    <!-- Network and connectivity permissions -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <!-- Other permissions you might have -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
-    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+
+    <!-- Basic Bluetooth permissions -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- Location permissions (required for scanning on Android 6.0-11) -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- New Bluetooth permissions for Android 12+ -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!-- Declare BLE capability -->
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
+
+
+    <!-- Camera and storage permissions for image functionality -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- For Android 12 and below -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+    <!-- For Android 13+ -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 
     <application
         android:name=".HealthEdgeApplication"
@@ -41,6 +58,7 @@
             android:name=".ui.MainActivity"
             android:exported="false"
             android:theme="@style/Theme.HealthEdgeAI" />
+
         <!-- LoginActivity -->
         <activity
             android:name=".ui.LoginActivity"
@@ -65,10 +83,37 @@
             android:name=".ui.VitalSignsChartActivity"
             android:exported="false" />
 
-        <!-- FileProvider - Moved inside application tag where it belongs -->
+        <activity
+            android:name=".ui.RegisterActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Profile activity -->
+        <activity
+            android:name=".ui.ProfileActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.PatientDashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.DeviceScanActivity"
+            android:label="Select Device"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.DeviceScanActivity"
+            android:label="Select Device"
+            android:exported="false">
+        </activity>
+
+        <!-- FileProvider for both PDF export and image capture -->
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="${applicationId}.provider"
+            android:authorities="com.example.healthedgeai.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

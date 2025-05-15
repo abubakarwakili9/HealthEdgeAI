@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
+    <!-- Existing path for PDF export -->
     <external-files-path
         name="external_files"
         path="." />
+
+    <!-- Specific path for camera images -->
+    <external-files-path
+        name="my_images"
+        path="Pictures" />
+
+    <!-- Cache directory for temporary files -->
+    <cache-path
+        name="shared_images"
+        path="images/" />
 </paths>

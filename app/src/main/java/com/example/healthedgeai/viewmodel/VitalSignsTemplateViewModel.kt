@@ -15,8 +15,9 @@ class VitalSignsTemplateViewModel(application: Application) : AndroidViewModel(a
     val allTemplates: LiveData<List<VitalSignsTemplate>>
 
     init {
-        val dao = AppDatabase.getDatabase(application).vitalSignsTemplateDao()
-        repository = VitalSignsTemplateRepository(dao)
+        val database = AppDatabase.getDatabase(application)
+        val templateDao = database.vitalSignsTemplateDao()
+        repository = VitalSignsTemplateRepository(templateDao)
         allTemplates = repository.allTemplates
     }
 
@@ -52,14 +53,7 @@ class VitalSignsTemplateViewModel(application: Application) : AndroidViewModel(a
 
     fun deleteTemplate(templateId: String) {
         viewModelScope.launch {
-            repository.deleteTemplate(templateId)
-        }
-    }
-
-    fun getTemplateById(templateId: String, callback: (VitalSignsTemplate?) -> Unit) {
-        viewModelScope.launch {
-            val template = repository.getTemplateById(templateId)
-            callback(template)
+            repository.deleteTemplateDirectly(templateId)
         }
     }
 }

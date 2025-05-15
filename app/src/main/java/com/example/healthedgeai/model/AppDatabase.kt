@@ -7,15 +7,16 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
 @Database(
-    entities = [User::class, Patient::class, HealthRecord::class, VitalSignsTemplate::class],
-    version = 2,  // Increment version number since we're adding a new entity
+    entities = [User::class, Patient::class, HealthRecord::class, VitalSignsTemplate::class], // Add VitalSignsTemplate.class here
+    version = 2, // Increment version number
     exportSchema = false
 )
+@TypeConverters(Converters::class) // Add type converters
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao
     abstract fun patientDao(): PatientDao
     abstract fun healthRecordDao(): HealthRecordDao
-    abstract fun vitalSignsTemplateDao(): VitalSignsTemplateDao
+    abstract fun vitalSignsTemplateDao(): VitalSignsTemplateDao // Add this line
 
     companion object {
         @Volatile
@@ -28,7 +29,7 @@ abstract class AppDatabase : RoomDatabase() {
                     AppDatabase::class.java,
                     "health_edge_ai_database"
                 )
-                    .fallbackToDestructiveMigration()  // This will recreate the database if the version changes
+                    .fallbackToDestructiveMigration() // Add this line for easy development
                     .build()
                 INSTANCE = instance
                 instance

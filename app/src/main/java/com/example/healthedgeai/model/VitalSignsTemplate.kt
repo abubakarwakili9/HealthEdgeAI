@@ -2,11 +2,8 @@ package com.example.healthedgeai.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.UUID
+import java.util.*
 
-/**
- * Entity class for storing vital signs templates
- */
 @Entity(tableName = "vital_signs_templates")
 data class VitalSignsTemplate(
     @PrimaryKey val templateId: String = UUID.randomUUID().toString(),
@@ -19,6 +16,5 @@ data class VitalSignsTemplate(
     val oxygenSaturation: Int? = null,
     val bloodGlucose: Float? = null,
     val weight: Float? = null,
-    val height: Float? = null,
-    val createdAt: Long = System.currentTimeMillis()
+    val height: Float? = null
 )

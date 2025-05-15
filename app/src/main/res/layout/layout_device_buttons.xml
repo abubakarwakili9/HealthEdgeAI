@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect to Devices"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConnectThermometer"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Thermometer"
+                android:textSize="12sp"
+                android:drawableTop="@drawable/ic_thermometer"
+                android:paddingTop="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConnectHeartRate"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Heart Rate"
+                android:textSize="12sp"
+                android:drawableTop="@drawable/ic_heart_rate"
+                android:paddingTop="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConnectBloodPressure"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Blood Pressure"
+                android:textSize="12sp"
+                android:drawableTop="@drawable/ic_blood_pressure"
+                android:paddingTop="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConnectOxygen"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Oxygen"
+                android:textSize="12sp"
+                android:drawableTop="@drawable/ic_oxygen"
+                android:paddingTop="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConnectGlucose"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Glucose"
+                android:textSize="12sp"
+                android:drawableTop="@drawable/ic_glucose"
+                android:paddingTop="8dp"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

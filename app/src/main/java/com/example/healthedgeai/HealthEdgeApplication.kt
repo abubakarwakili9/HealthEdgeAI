@@ -1,16 +1,25 @@
 package com.example.healthedgeai
 
+import android.app.Activity
 import android.app.Application
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
+import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.text.InputFilter
+import android.text.method.DigitsKeyListener
 import android.util.Log
+import android.view.View
+import android.view.ViewGroup
+import android.view.ViewTreeObserver
+import android.widget.EditText
 import androidx.room.Room
 import com.example.healthedgeai.model.AppDatabase
 import com.example.healthedgeai.util.OnnxModelWrapper
+import com.google.android.material.textfield.TextInputEditText
 import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -75,6 +84,31 @@ class HealthEdgeApplication : Application() {
 
         // Schedule periodic data sync
         schedulePeriodicSync()
+
+        // Register activity lifecycle callbacks to fix EditText fields
+        registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
+            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
+                // Fix all EditText fields once the activity's content view is laid out
+                activity.window.decorView.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+                    override fun onGlobalLayout() {
+                        // Remove the listener to avoid multiple calls
+                        activity.window.decorView.viewTreeObserver.removeOnGlobalLayoutListener(this)
+
+                        // Find and fix all EditText fields in this activity
+                        InputUtils.clearFiltersFromAllEditTexts(activity.window.decorView)
+                        Log.d(TAG, "Fixed input filters in ${activity.javaClass.simpleName}")
+                    }
+                })
+            }
+
+            // Other required lifecycle methods (not used for our fix)
+            override fun onActivityStarted(activity: Activity) {}
+            override fun onActivityResumed(activity: Activity) {}
+            override fun onActivityPaused(activity: Activity) {}
+            override fun onActivityStopped(activity: Activity) {}
+            override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
+            override fun onActivityDestroyed(activity: Activity) {}
+        })
     }
 
     private fun initializeComponents() {
@@ -248,5 +282,46 @@ class HealthEdgeApplication : Application() {
         }
 
         super.onTerminate()
+    }
+}
+
+/**
+ * Utility class to handle text input fields
+ */
+object InputUtils {
+    private const val TAG = "InputUtils"
+
+    /**
+     * Recursively find and clear filters from all EditText and TextInputEditText fields
+     */
+    fun clearFiltersFromAllEditTexts(view: View) {
+        if (view is ViewGroup) {
+            // Process all children in the view group
+            for (i in 0 until view.childCount) {
+                clearFiltersFromAllEditTexts(view.getChildAt(i))
+            }
+        } else if (view is EditText) {
+            // Clear filters and fix keyListener
+            fixEditText(view)
+        }
+    }
+
+    /**
+     * Fix EditText to allow spaces and other characters
+     */
+    private fun fixEditText(editText: EditText) {
+        // Clear all filters
+        editText.filters = arrayOfNulls(0)
+
+        // If it's a digit-only field, ensure we preserve that but still allow spaces
+        if (editText.keyListener is DigitsKeyListener) {
+            // Only modify non-numeric fields
+            if (editText.inputType and android.text.InputType.TYPE_CLASS_NUMBER == 0) {
+                // Reset keyListener to default
+                editText.keyListener = null
+            }
+        }
+
+        Log.d(TAG, "Fixed input filters on EditText: ${editText.id}")
     }
 }

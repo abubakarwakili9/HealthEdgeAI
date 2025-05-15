@@ -31,7 +31,10 @@ class LoginActivity : AppCompatActivity() {
 
         setupListeners()
         observeViewModel()
-
+// Add to LoginActivity.kt in the setupListeners() method
+        binding.tvRegister.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
         // Auto-fill default credentials
         binding.etEmail.setText("worker@example.com")
         binding.etPassword.setText("password123")

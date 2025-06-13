@@ -1,7 +1,7 @@
 # RuralEdgeHealth Dataset
 
 ## Overview
-Synthetic healthcare IoT dataset used for developing and validating the RuralEdgeHealth offline-first edge AI system.
+The healthcare IoT dataset is used for developing and validating the RuralEdgeHealth offline-first edge AI system.
 
 ## Dataset Description
 - **File**: `synthetic_healthcare_iot_dataset_enhanced.csv`

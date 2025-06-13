@@ -6,7 +6,7 @@ import java.util.Date
 import java.util.Locale
 
 object LogHelper {
-    private const val TAG = "HealthEdgeAI"
+    private const val TAG = "RuralEdgeHealth"
     private val dateFormat = SimpleDateFormat("HH:mm:ss.SSS", Locale.US)
 
     fun v(message: String, tag: String = TAG) {

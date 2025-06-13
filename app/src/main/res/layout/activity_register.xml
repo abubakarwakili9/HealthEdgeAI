@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:gravity="center"
-            android:text="HealthEdge AI"
+            android:text="RuralEdgeHealth"
             android:textColor="@color/purple_500"
             android:textSize="24sp"
             android:textStyle="bold" />

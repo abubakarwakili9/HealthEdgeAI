@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">HealthEdgeAI</string>
+    <string name="app_name">RuralEdgeHealth</string>
     <!-- Add these strings to your existing strings.xml file -->
     <string name="select_vital_sign">Select Vital Sign</string>
     <string name="no_data_available">No data available</string>

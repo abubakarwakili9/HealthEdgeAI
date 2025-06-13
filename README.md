@@ -23,7 +23,7 @@ RuralEdgeHealth is an innovative healthcare monitoring system that brings AI-pow
 
 The synthetic healthcare IoT dataset used for training and validation is available in the [`data/`](data/) folder:
 
-- **File**: [`synthetic_healthcare_iot_dataset_enhanced.csv`](data/synthetic_healthcare_iot_dataset_enhanced.csv)
+- **File**: [`healthcare_iot_dataset.csv`](data/healthcare_iot_dataset.csv)
 - **Records**: 10,000 synthetic health monitoring records
 - **Features**: 15 features including vital signs, device metrics, and contextual information
 - **Classes**: Healthy (50%), Moderate (35%), Critical (15%)
@@ -52,7 +52,7 @@ This repository accompanies our research paper:
 
 **"RuralEdgeHealth: Offline-First Edge AI and IoT System for Healthcare Monitoring on Entry-Level Smartphones in Resource-Constrained Communities"**
 
-*Submitted to Intelligent Medicine Journal*
+*Submitted to Internet of Things (Elsevier)*
 
 ### Key Contributions:
 - First complete offline-first edge AI healthcare system on entry-level devices

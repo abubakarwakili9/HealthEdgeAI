@@ -271,7 +271,7 @@ ls -la
 #### **🤖 AI Health Classification**
 
 1. **Triggering Analysis:**
-   - Once all vital signs collected, tap **"Analyze Health Status"**
+   - Once all vital signs are collected, tap **"Analyze Health Status/Run Health Assessment"**
    - **Edge AI processing** begins immediately
    - **Progress indicator** shows analysis status (~50-100ms)
    - **No internet required** - all processing local

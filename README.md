@@ -48,9 +48,9 @@ cd RuralEdgeHealth
 
 ## 📊 Dataset
 
-The synthetic healthcare IoT dataset used for training and validation is available in the [`data/`](data/) folder:
+The healthcare IoT dataset used for training and validation is available in the [`data/`](data/) folder:
 
-- **File**: [`synthetic_healthcare_iot_dataset_enhanced.csv`](data/synthetic_healthcare_iot_dataset_enhanced.csv)
+- **File**: [`healthcare_iot_dataset.csv`](data/healthcare_iot_dataset.csv)
 - **Records**: 10,000 synthetic health monitoring records
 - **Features**: 15 features including vital signs, device metrics, and contextual information
 - **Classes**: Healthy (50%), Moderate (35%), Critical (15%)

@@ -99,10 +99,13 @@ Sara Bakkali - Co-Researcher - s.bakkali@insa.ueuromed.org
 
 School of Digital Engineering and Artificial Intelligence
 Euromed University of Fez, Morocco
+
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
 🤝 Contributing
 We welcome contributions! Please feel free to submit issues, fork the repository, and create pull requests.
+
 🌟 Impact
 This research supports digital health equity by extending AI-driven healthcare monitoring to underserved populations globally, advancing UN Sustainable Development Goal 3 (Good Health and Well-being) and WHO Universal Health Coverage objectives.
 

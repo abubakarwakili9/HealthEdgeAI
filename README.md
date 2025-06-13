@@ -78,3 +78,32 @@ Build and run on target device
 
 📚 Citation
 If you use this code or dataset in your research, please cite:
+@article{wakili2025ruraledgehealth,
+  title={RuralEdgeHealth: Offline-First Edge AI and IoT System for Healthcare Monitoring on Entry-Level Smartphones in Resource-Constrained Communities},
+  author={Wakili, Abubakar and Bakkali, Sara},
+  journal={Internet of Things},
+  year={2025},
+  note={Manuscript Submitted}
+}
+
+🔗 Links
+
+Dataset: data/healthcare_iot_dataset.csv
+Documentation: data/README.md
+Paper: [Internet of Things]
+
+👥 Authors
+
+Abubakar Wakili - Lead Researcher - a.wakili@ueuromed.org
+Sara Bakkali - Co-Researcher - s.bakkali@insa.ueuromed.org
+
+School of Digital Engineering and Artificial Intelligence
+Euromed University of Fez, Morocco
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+🤝 Contributing
+We welcome contributions! Please feel free to submit issues, fork the repository, and create pull requests.
+🌟 Impact
+This research supports digital health equity by extending AI-driven healthcare monitoring to underserved populations globally, advancing UN Sustainable Development Goal 3 (Good Health and Well-being) and WHO Universal Health Coverage objectives.
+
+Made with ❤️ for global health equity

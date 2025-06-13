@@ -60,12 +60,12 @@ This repository accompanies our research paper:
 - Comprehensive technical validation with quantified deployment metrics
 - Open-source implementation supporting global research reproducibility
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
-- Android Studio Meerkat (2024.3.1+)
+- Android Studio Meerkat 2024.3.1+
 - Android SDK API Level 26+
-- Device with minimum 2GB RAM
+- Device with minimum 2GB RAM, Android 8.0+
 
 ### Installation
 1. Clone the repository:
@@ -75,6 +75,20 @@ This repository accompanies our research paper:
 Open in Android Studio
 Sync project with Gradle files
 Build and run on target device
+
+Testing the System
+
+Launch the application
+Navigate to "Health Assessment"
+Input vital signs manually or connect BLE sensors
+Observe real-time AI classification results
+
+📊 Model Information
+
+Algorithm: Random Forest (optimized with ONNX)
+Accuracy: 98.25% on synthetic test data
+Inference Time: <100ms on entry-level Android devices
+Model Location: app/src/main/assets/model.onnx
 
 📚 Citation
 If you use this code or dataset in your research, please cite:

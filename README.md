@@ -72,23 +72,23 @@ This repository accompanies our research paper:
    ```bash
    git clone https://github.com/abubakarwakili9/RuralEdgeHealth.git
 
-Open in Android Studio
-Sync project with Gradle files
-Build and run on target device
+- Open in Android Studio
+- Sync project with Gradle files
+- Build and run on target device
 
 Testing the System
 
-Launch the application
-Navigate to "Health Assessment"
-Input vital signs manually or connect BLE sensors
-Observe real-time AI classification results
+- Launch the application
+- Navigate to "Health Assessment"
+- Input vital signs manually or connect BLE sensors
+- Observe real-time AI classification results
 
 📊 Model Information
 
-Algorithm: Random Forest (optimized with ONNX)
-Accuracy: 98.25% on synthetic test data
-Inference Time: <100ms on entry-level Android devices
-Model Location: app/src/main/assets/model.onnx
+- Algorithm: Random Forest (optimized with ONNX)
+- Accuracy: 98.25% on synthetic test data
+- Inference Time: <100ms on entry-level Android devices
+- Model Location: app/src/main/assets/model.onnx
 
 📚 Citation
 If you use this code or dataset in your research, please cite:

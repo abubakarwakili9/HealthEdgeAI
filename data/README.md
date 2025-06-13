@@ -4,7 +4,7 @@
 The healthcare IoT dataset is used for developing and validating the RuralEdgeHealth offline-first edge AI system.
 
 ## Dataset Description
-- **File**: `synthetic_healthcare_iot_dataset_enhanced.csv`
+- **File**: `healthcare_iot_dataset.csv`
 - **Records**: 10,000 synthetic health monitoring records
 - **Features**: 15 features across 4 categories
 - **Classes**: Healthy (50%), Moderate (35%), Critical (15%)

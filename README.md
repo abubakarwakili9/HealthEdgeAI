@@ -78,13 +78,7 @@ Build and run on target device
 
 📚 Citation
 If you use this code or dataset in your research, please cite:
-@article{wakili2025ruraledgehealth,
-  title={RuralEdgeHealth: Offline-First Edge AI and IoT System for Healthcare Monitoring on Entry-Level Smartphones in Resource-Constrained Communities},
-  author={Wakili, Abubakar and Bakkali, Sara},
-  journal={Internet of Things},
-  year={2025},
-  note={Manuscript Submitted}
-}
+A. Wakili and S. Bakkali, "RuralEdgeHealth: Offline-First Edge AI and IoT System for Healthcare Monitoring on Entry-Level Smartphones in Resource-Constrained Communities," Intelligent Medicine, 2025, manuscript submitted for publication.
 
 🔗 Links
 

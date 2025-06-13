@@ -86,7 +86,7 @@ Testing the System
 📊 Model Information
 
 - Algorithm: Random Forest (optimized with ONNX)
-- Accuracy: 98.25% on synthetic test data
+- Accuracy: 98.25% 
 - Inference Time: <100ms on entry-level Android devices
 - Model Location: app/src/main/assets/model.onnx
 

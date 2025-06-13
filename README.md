@@ -5,10 +5,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://developer.android.com)
 [![Language](https://img.shields.io/badge/Language-Kotlin-purple.svg)](https://kotlinlang.org)
+[![Phase](https://img.shields.io/badge/Development-Phase%201%20Validation-blue.svg)](GETTING_STARTED.md)
 
 ## 🎯 Overview
 
 RuralEdgeHealth is an innovative healthcare monitoring system that brings AI-powered health assessment to underserved populations without requiring internet connectivity. The system addresses the healthcare needs of **2.6 billion people globally** who lack reliable internet access.
+
+> **Phase 1 Status:** This foundational implementation successfully establishes technical feasibility and development priorities for advancing toward deployment-ready status. The system demonstrates clinical-grade AI performance on entry-level devices while identifying specific accessibility improvements for equitable deployment.
 
 ## ✨ Key Features
 
@@ -19,32 +22,65 @@ RuralEdgeHealth is an innovative healthcare monitoring system that brings AI-pow
 - 🔋 **Energy Efficient**: <4% battery consumption per hour for sustained field operation
 - 🌍 **Accessibility Focus**: Designed for diverse user populations and literacy levels
 
+## 🚀 Quick Start
+
+**New to RuralEdgeHealth?** 
+
+📖 **[Complete Getting Started Guide →](GETTING_STARTED.md)**
+
+### Rapid Setup (5 minutes)
+```bash
+# Clone and setup
+git clone https://github.com/abubakarwakili9/RuralEdgeHealth.git
+cd RuralEdgeHealth
+
+# Open in Android Studio, sync Gradle, and run
+# Detailed instructions: GETTING_STARTED.md
+```
+
+### Quick Test
+1. 📱 Launch app → Register/Login
+2. 👤 Add patient → Enter basic info  
+3. 🏥 Health Assessment → Input vitals or connect BLE sensors
+4. 🤖 View AI results → Real-time classification (<100ms)
+
+**Need help?** See our **[detailed setup and usage guide](GETTING_STARTED.md)** with step-by-step instructions, troubleshooting, and demo workflows.
+
 ## 📊 Dataset
 
 The synthetic healthcare IoT dataset used for training and validation is available in the [`data/`](data/) folder:
 
-- **File**: [`healthcare_iot_dataset.csv`](data/healthcare_iot_dataset.csv)
+- **File**: [`synthetic_healthcare_iot_dataset_enhanced.csv`](data/synthetic_healthcare_iot_dataset_enhanced.csv)
 - **Records**: 10,000 synthetic health monitoring records
 - **Features**: 15 features including vital signs, device metrics, and contextual information
 - **Classes**: Healthy (50%), Moderate (35%), Critical (15%)
 
 For detailed dataset documentation, see [`data/README.md`](data/README.md).
 
-## 🏗️ Architecture
+## 🏗️ System Architecture
 
 - **Presentation Layer**: User interface with BLE integration and manual input
 - **Business Logic Layer**: Data processing, AI inference, and clinical context
 - **Data Layer**: Local storage with encryption and model caching
 - **Infrastructure Layer**: Android runtime with ONNX optimization
 
-## 🔬 Research Results
+## 🔬 Phase 1 Validation Results
 
-| Metric | Achievement | Hardware |
-|--------|-------------|----------|
-| Classification Accuracy | 98.25% | 2GB RAM Android 8.0+ |
-| Inference Time | <100ms | Entry-level smartphones |
-| Battery Consumption | <4%/hour | Sustained field operation |
-| System Usability (Healthcare Workers) | 85.6 SUS | Professional deployment |
+| Metric | Achievement | Hardware | Status |
+|--------|-------------|----------|---------|
+| Classification Accuracy | 98.25% | 2GB RAM Android 8.0+ | ✅ Validated |
+| Inference Time | <100ms | Entry-level smartphones | ✅ Validated |
+| Battery Consumption | <4%/hour | Sustained field operation | ✅ Validated |
+| System Usability (Healthcare Workers) | 85.6 SUS | Professional deployment | ✅ Validated |
+| Overall Task Completion | 93.3% | Cross-device testing | ✅ Validated |
+| Accessibility (Rural Users) | 48.1 SUS | Requires enhancement | ⚠️ Phase 2 Priority |
+
+### Key Phase 1 Achievements
+- ✅ **Technical Feasibility Confirmed**: Clinical-grade AI operates successfully on entry-level devices
+- ✅ **Cross-Device Validation**: Consistent performance across Android configurations  
+- ✅ **Energy Efficiency Validated**: Sustained operation in resource-limited environments
+- ✅ **Professional Usability**: Excellent acceptance among healthcare workers
+- ⚠️ **Accessibility Insights**: Identified specific improvements needed for rural deployment
 
 ## 📄 Research Paper
 
@@ -60,61 +96,106 @@ This repository accompanies our research paper:
 - Comprehensive technical validation with quantified deployment metrics
 - Open-source implementation supporting global research reproducibility
 
-## 🚀 Quick Start
+## 📖 Documentation
 
-### Prerequisites
-- Android Studio Meerkat 2024.3.1+
-- Android SDK API Level 26+
-- Device with minimum 2GB RAM, Android 8.0+
+| Document | Description | Audience |
+|----------|-------------|----------|
+| **[Getting Started Guide](GETTING_STARTED.md)** | Complete setup, usage, and testing instructions | Developers, Researchers |
+| **[Dataset Documentation](data/README.md)** | Detailed dataset information and usage | Data Scientists, ML Engineers |
+| **[API Documentation](docs/API.md)** | Technical API reference *(Coming Soon)* | Integration Developers |
+| **[Deployment Guide](docs/DEPLOYMENT.md)** | Production deployment instructions *(Phase 2)* | Healthcare Organizations |
 
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/abubakarwakili9/RuralEdgeHealth.git
+## 📊 Model Information
 
-- Open in Android Studio
-- Sync project with Gradle files
-- Build and run on target device
+- **Algorithm**: Random Forest (optimized with ONNX)
+- **Training Data**: 10,000 synthetic healthcare records
+- **Validation**: 5-fold cross-validation with SMOTETomek balancing
+- **Optimization**: ONNX Runtime v1.17.0 with ARM architecture optimization
+- **Model Location**: `app/src/main/assets/random_forest_model.onnx`
+- **Performance**: 98.25% accuracy, F1-score: 0.9825, ROC-AUC: 0.9989
 
-Testing the System
+## 🗺️ Development Roadmap
 
-- Launch the application
-- Navigate to "Health Assessment"
-- Input vital signs manually or connect BLE sensors
-- Observe real-time AI classification results
+### ✅ Phase 1: Technical Validation (Current)
+- Core offline-first edge AI system
+- Cross-device performance validation
+- Basic accessibility evaluation
+- Open-source release for reproducibility
 
-📊 Model Information
+### 🔄 Phase 2: Accessibility Enhancement (Planned)
+- Enhanced UI for rural/low-literacy users (Target: >75 SUS)
+- Expanded BLE sensor ecosystem support
+- Advanced clinical decision support features
+- Comprehensive deployment documentation
 
-- Algorithm: Random Forest (optimized with ONNX)
-- Accuracy: 98.25% 
-- Inference Time: <100ms on entry-level Android devices
-- Model Location: app/src/main/assets/model.onnx
+### 🎯 Phase 3: Production Deployment (Future)
+- Large-scale clinical validation studies
+- Healthcare system integration APIs
+- Multi-language support and localization
+- Regulatory compliance frameworks
 
-📚 Citation
+## 📚 Citation
+
 If you use this code or dataset in your research, please cite:
-A. Wakili and S. Bakkali, "RuralEdgeHealth: Offline-First Edge AI and IoT System for Healthcare Monitoring on Entry-Level Smartphones in Resource-Constrained Communities," Internet of Things, 2025, manuscript submitted for publication.
 
-🔗 Links
+```bibtex
+@article{wakili2025ruraledgehealth,
+  title={RuralEdgeHealth: Offline-First Edge AI and IoT System for Healthcare Monitoring on Entry-Level Smartphones in Resource-Constrained Communities},
+  author={Wakili, Abubakar and Bakkali, Sara},
+  journal={Internet of Things},
+  year={2025},
+  note={Manuscript submitted for publication},
+  url={https://github.com/abubakarwakili9/RuralEdgeHealth}
+}
+```
 
-Dataset: data/healthcare_iot_dataset.csv
-Documentation: data/README.md
-Paper: [Internet of Things]
+## 🔗 Links
 
-👥 Authors
+- **📊 Dataset**: [data/synthetic_healthcare_iot_dataset_enhanced.csv](data/synthetic_healthcare_iot_dataset_enhanced.csv)
+- **📖 Getting Started**: [GETTING_STARTED.md](GETTING_STARTED.md)
+- **📋 Documentation**: [data/README.md](data/README.md)
+- **📄 Paper**: [Internet of Things Journal (Under Review)](https://www.sciencedirect.com/journal/internet-of-things)
 
-Abubakar Wakili - Lead Researcher - a.wakili@ueuromed.org
-Sara Bakkali - Co-Researcher - s.bakkali@insa.ueuromed.org
+## 👥 Authors
 
-School of Digital Engineering and Artificial Intelligence
-Euromed University of Fez, Morocco
+- **Abubakar Wakili** - *Lead Researcher* - [a.wakili@ueuromed.org](mailto:a.wakili@ueuromed.org)
+- **Sara Bakkali** - *Co-Researcher* - [s.bakkali@insa.ueuromed.org](mailto:s.bakkali@insa.ueuromed.org)
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+*School of Digital Engineering and Artificial Intelligence*  
+*Euromed University of Fez, Morocco*
 
-🤝 Contributing
-We welcome contributions! Please feel free to submit issues, fork the repository, and create pull requests.
+## 📄 License
 
-🌟 Impact
-This research supports digital health equity by extending AI-driven healthcare monitoring to underserved populations globally, advancing UN Sustainable Development Goal 3 (Good Health and Well-being) and WHO Universal Health Coverage objectives.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Made with ❤️ for global health equity
+## 🤝 Contributing
+
+We welcome contributions! This Phase 1 validation establishes the foundation for community-driven development:
+
+- 🐛 **Bug Reports**: Help us improve system reliability
+- 💡 **Feature Requests**: Suggest enhancements for Phase 2 development  
+- 🔍 **Accessibility Testing**: Test with diverse user populations
+- 📚 **Documentation**: Improve setup and usage guides
+- 🌍 **Localization**: Add support for additional languages
+
+Please see our **[Getting Started Guide](GETTING_STARTED.md)** for development setup instructions.
+
+## 🌟 Impact & Recognition
+
+This research supports **digital health equity** by extending AI-driven healthcare monitoring to underserved populations globally, advancing:
+
+- 🎯 **UN Sustainable Development Goal 3**: Good Health and Well-being
+- 🏥 **WHO Universal Health Coverage**: Equitable access to quality health services
+- 🌍 **Digital Health Equity**: Accessible AI for 2.6 billion underserved people
+
+### Phase 1 Validation Impact
+- **Technical Foundation**: Proven feasibility of offline-first edge AI on accessible hardware
+- **Research Reproducibility**: Open-source implementation enables global collaboration
+- **Development Priorities**: Evidence-based roadmap for equitable deployment
+- **Academic Contribution**: First complete system addressing digital health infrastructure barriers
+
+---
+
+*Made with ❤️ for global health equity*
+
+**Ready to get started?** 🚀 **[Follow our complete setup guide →](GETTING_STARTED.md)**

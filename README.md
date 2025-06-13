@@ -1,4 +1,3 @@
-```markdown
 # RuralEdgeHealth
 
 **Offline-First Edge AI and IoT System for Healthcare Monitoring on Entry-Level Smartphones in Resource-Constrained Communities**

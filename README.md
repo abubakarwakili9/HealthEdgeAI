@@ -11,7 +11,7 @@
 
 RuralEdgeHealth is an innovative healthcare monitoring system that brings AI-powered health assessment to underserved populations without requiring internet connectivity. The system addresses the healthcare needs of **2.6 billion people globally** who lack reliable internet access.
 
-> **Phase 1 Status:** This foundational implementation successfully establishes technical feasibility and development priorities for advancing toward deployment-ready status. The system demonstrates clinical-grade AI performance on entry-level devices while identifying specific accessibility improvements for equitable deployment.
+> **Phase 1 Status:** This foundational implementation successfully establishes technical feasibility and development priorities for advancing toward deployment-ready status. The system demonstrates sophisticated AI performance on entry-level devices while identifying specific accessibility improvements for equitable deployment.
 
 ## ✨ Key Features
 

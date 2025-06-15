@@ -2,6 +2,7 @@
 
 ## Overview
 The healthcare IoT dataset is used for developing and validating the RuralEdgeHealth offline-first edge AI system.
+This dataset is a controlled, synthetic IoT health dataset developed for benchmarking **offline-capable AI health systems** in **rural or low-connectivity environments**. It is designed for use in edge-AI applications such as mobile health monitoring and on-device inference.
 
 ## Dataset Description
 - **File**: `healthcare_iot_dataset.csv`

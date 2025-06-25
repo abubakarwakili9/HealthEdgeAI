@@ -17,7 +17,7 @@ RuralEdgeHealth is an innovative healthcare monitoring system that brings AI-pow
 
 - 🔄 **Offline-First Architecture**: Complete functionality without internet connectivity
 - 📱 **Entry-Level Hardware Support**: Optimized for 2GB RAM Android 8.0+ devices  
-- 🤖 **Clinical-Grade AI**: 98.25% classification accuracy with <100ms inference time
+- 🤖 **Model Performance**: 98.25% classification accuracy with <100ms inference time
 - 🔗 **IoT Integration**: Bluetooth Low Energy sensor connectivity with manual fallback
 - 🔋 **Energy Efficient**: <4% battery consumption per hour for sustained field operation
 - 🌍 **Accessibility Focus**: Designed for diverse user populations and literacy levels

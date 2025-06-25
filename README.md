@@ -140,9 +140,9 @@ If you use this code or dataset in your research, please cite:
 
 ```bibtex
 @article{wakili2025ruraledgehealth,
-  title={RuralEdgeHealth: Offline-First Edge AI and IoT System for Healthcare Monitoring on Entry-Level Smartphones in Resource-Constrained Communities},
+  title={An Intelligent IoT Healthcare Monitoring System with Offline-First Edge AI for Resource-Constrained Environments},
   author={Wakili, Abubakar and Bakkali, Sara},
-  journal={Internet of Things},
+  journal={Array},
   year={2025},
   note={Manuscript submitted for publication},
   url={https://github.com/abubakarwakili9/RuralEdgeHealth}

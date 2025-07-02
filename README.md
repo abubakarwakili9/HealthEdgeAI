@@ -86,9 +86,9 @@ For detailed dataset documentation, see [`data/README.md`](data/README.md).
 
 This repository accompanies our research paper:
 
-**"RuralEdgeHealth: Offline-First Edge AI and IoT System for Healthcare Monitoring on Entry-Level Smartphones in Resource-Constrained Communities"**
+**"RuralEdgeHealth: A Lightweight Edge-AI Framework for Offline Vital Signs Monitoring in Resource-Constrained IoT Healthcare Systems"**
 
-*Submitted to Internet of Things (Elsevier)*
+*Submitted to Array*
 
 ### Key Contributions:
 - First complete offline-first edge AI healthcare system on entry-level devices
@@ -140,9 +140,7 @@ If you use this code or dataset in your research, please cite:
 
 ```bibtex
 @article{wakili2025ruraledgehealth,
-  title={RuralEdgeHealth: A Lightweight Edge-AI
-Framework for Offline Vital Signs Monitoring in
-Resource-Constrained IoT Healthcare Systems},
+  title={RuralEdgeHealth: A Lightweight Edge-AI Framework for Offline Vital Signs Monitoring in Resource-Constrained IoT Healthcare Systems},
   author={Wakili, Abubakar and Bakkali, Sara},
   journal={Array},
   year={2025},

@@ -59,11 +59,13 @@ For detailed dataset documentation, see [`data/README.md`](data/README.md).
 
 ## 🏗️ System Architecture
 
-- **Presentation Layer**: User interface with BLE integration and manual input
-- **Business Logic Layer**: Data processing, AI inference, and clinical context
-- **Data Layer**: Local storage with encryption and model caching
-- **Infrastructure Layer**: Android runtime with ONNX optimization
-
+- **Presentation and Interface Layer**: This provides an interactive user interface with multi-modal input support optimized for diverse user populations.
+- **IoT Sensor Integration Layer**: The IoT Sensor Integration Layer manages standardized BLE medical device connectivity with intelligent fallback mechanisms.
+- **Edge Intelligence & Processing Layer:**:This This layer orchestrates a lightweight AI pipeline optimized for resource-constrained inference.
+- **Data Management & Persistence Layer**: This layer ensures Local storage with encryption and model caching. 
+- **Infrastructure & Runtime  Layer**: The Infrastructure and the Runtime Layer provide cross-platform runtime optimization for diverse hardware configurations.
+ 
+ 
 ## 🔬 Phase 1 Validation Results
 
 | Metric | Achievement | Hardware | Status |

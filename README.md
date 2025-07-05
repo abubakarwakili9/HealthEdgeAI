@@ -59,6 +59,7 @@ For detailed dataset documentation, see [`data/README.md`](data/README.md).
 
 ## 🏗️ System Architecture
 
+The architecture comprises a modular five-layer as follows:
 - **Presentation and Interface Layer**: This provides an interactive user interface with multi-modal input support optimized for diverse user populations.
 - **IoT Sensor Integration Layer**: The IoT Sensor Integration Layer manages standardized BLE medical device connectivity with intelligent fallback mechanisms.
 - **Edge Intelligence & Processing Layer:**:This This layer orchestrates a lightweight AI pipeline optimized for resource-constrained inference.
